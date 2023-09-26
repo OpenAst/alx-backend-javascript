@@ -6,3 +6,10 @@ export default function createIteratorObject(report) {
 			}
 		}
 	}
+
+	const iterator = iterateEmployees();
+
+	return {
+		next: () => iterator.next(),
+	};
+}
