@@ -1,8 +1,8 @@
 export default function createIteratorObject(report) {
-	const myarray = [];
-	for (const item of Object.values(reprot.allEmployees)) {
-		myarray.push(...item);
+	function* iterateEmployees() {
+		for (const department of report.departments) {
+			for (const employee of department.employees) {
+				yield employee;
+			}
+		}
 	}
-
-	return myarray;
-}
